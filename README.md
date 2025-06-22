@@ -24,8 +24,8 @@ A three-level Capture The Flag (CTF) web application designed to teach fundament
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/1samyool/TM470SecureCTF.git
-   cd TM470SecureCTF
+   git clone https://github.com/1samyool/ctf-project.git
+   cd ctf-project
    ```
 
 2. Create a virtual environment (recommended):
