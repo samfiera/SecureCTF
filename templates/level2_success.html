@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Level 2 - Success{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-success">Excellent Work!</h5>
+        <p class="card-text">
+            You've successfully completed Level 2! Here's your flag:
+        </p>
+        <div class="flag-text">
+            {{ flag }}
+        </div>
+        <hr>
+        <p class="card-text">
+            <strong>Explanation:</strong> This challenge demonstrated the basics of symmetric encryption.
+            While Fernet is a secure encryption method when properly implemented, exposing encryption keys
+            (as we did in this challenge) would be a serious security risk in a real application.
+        </p>
+        <a href="/level3" class="btn btn-primary mt-3">Proceed to Level 3</a>
+    </div>
+</div>
+{% endblock %} 

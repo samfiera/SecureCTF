@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Level 3 - Success{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-success">Outstanding Achievement!</h5>
+        <p class="card-text">
+            You've successfully completed Level 3! Here's your flag:
+        </p>
+        <div class="flag-text">
+            {{ flag }}
+        </div>
+        <hr>
+        <p class="card-text">
+            <strong>Explanation:</strong> This challenge demonstrated a common vulnerability in web applications - SQL injection.
+            In real applications, you should always:
+            <ul>
+                <li>Use parameterized queries or ORM methods that handle escaping</li>
+                <li>Validate and sanitize user input</li>
+                <li>Follow the principle of least privilege for database users</li>
+                <li>Use prepared statements instead of string concatenation</li>
+            </ul>
+        </p>
+        <div class="alert alert-success mt-3">
+            <strong>Congratulations!</strong> You've completed all three levels of the CTF challenge!
+        </div>
+        <a href="/" class="btn btn-primary mt-3">Return to Home</a>
+    </div>
+</div>
+{% endblock %} 

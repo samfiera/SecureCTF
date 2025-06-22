@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}SQL Master - SecureCTF{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+    <h1>Level 3: SQL Master</h1>
+    <p class="text-secondary">Can you find the hidden flag in the database?</p>
+</div>
+
+<div class="grid">
+    <div class="card">
+        <h2>Challenge Description</h2>
+        <p class="text-secondary mb-4">
+            Welcome to the SQL Injection challenge! Your task is to:
+        </p>
+        <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.5rem;">
+            <li>Find a way to exploit the search query</li>
+            <li>Use SQL injection techniques to find the hidden flag</li>
+            <li>The flag is stored in a table called 'flags'</li>
+        </ul>
+        <div style="background: var(--hover-bg); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+            <p style="font-family: monospace; margin: 0;">
+                SQL Query: SELECT username, email FROM users WHERE username LIKE '%[INPUT]%'
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>User Search</h2>
+        <form method="POST" action="{{ url_for('level3') }}">
+            <div class="mb-4">
+                <input type="text" name="search" class="input-field" placeholder="Search users..." required>
+            </div>
+            <button type="submit" name="action" value="search" class="btn btn-primary" style="width: 100%;">Search Users</button>
+        </form>
+
+        {% if results %}
+        <div style="margin-top: 2rem;">
+            <h3 class="mb-4">Search Results:</h3>
+            <div style="background: var(--hover-bg); padding: 1rem; border-radius: 0.5rem; font-family: monospace;">
+                {% for result in results %}
+                {{ result|join(' | ') }}<br>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h2>Submit Flag</h2>
+        {% if error %}
+        <div class="alert alert-error mb-4">
+            {{ error }}
+        </div>
+        {% endif %}
+        {% if success %}
+        <div class="alert alert-success mb-4">
+            <strong>Congratulations!</strong> You've completed Level 3!
+        </div>
+        {% endif %}
+        <form method="POST" action="{{ url_for('level3') }}">
+            <div class="mb-4">
+                <input type="text" name="flag" class="input-field" placeholder="Enter the flag" required>
+            </div>
+            <button type="submit" name="action" value="submit_flag" class="btn btn-primary" style="width: 100%;">Submit Flag</button>
+        </form>
+    </div>
+</div>
+
+{% if not success %}
+<div class="card" style="margin-top: 2rem;">
+    <h2>Need Help?</h2>
+    <p class="text-secondary mb-4">
+        Here are some tips to get you started:
+    </p>
+    <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.5rem;">
+        <li>Try using SQL UNION to combine queries</li>
+        <li>Remember to match the number of columns in your UNION</li>
+        <li>The flag is stored in the 'flags' table in a column called 'flag'</li>
+        <li>Use -- to comment out the rest of the query</li>
+    </ul>
+</div>
+{% endif %}
+{% endblock %} 

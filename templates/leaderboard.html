@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Leaderboard - SecureCTF{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+    <h1>Leaderboard</h1>
+    <p class="text-secondary">Track your progress and compare your times with other challengers!</p>
+</div>
+
+<div style="margin-bottom: 2rem; text-align: center;">
+    <a href="{{ url_for('leaderboard', level=1) }}" 
+       class="btn {% if current_level == 1 %}btn-primary{% else %}btn-secondary{% endif %}" 
+       style="margin: 0 0.5rem;">Level 1</a>
+    <a href="{{ url_for('leaderboard', level=2) }}" 
+       class="btn {% if current_level == 2 %}btn-primary{% else %}btn-secondary{% endif %}"
+       style="margin: 0 0.5rem;">Level 2</a>
+    <a href="{{ url_for('leaderboard', level=3) }}" 
+       class="btn {% if current_level == 3 %}btn-primary{% else %}btn-secondary{% endif %}"
+       style="margin: 0 0.5rem;">Level 3</a>
+</div>
+
+<div class="card">
+    <h2 class="mb-4">Level {{ current_level }} - Top Times</h2>
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+                <th style="text-align: left; padding: 1rem; color: var(--text-secondary);">Rank</th>
+                <th style="text-align: left; padding: 1rem; color: var(--text-secondary);">Username</th>
+                <th style="text-align: center; padding: 1rem; color: var(--text-secondary);">Time</th>
+                <th style="text-align: center; padding: 1rem; color: var(--text-secondary);">Medal</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in leaderboard %}
+            <tr style="border-bottom: 1px solid var(--border-color);" 
+                {% if entry.username == username %}class="bg-blue-50"{% endif %}>
+                <td style="padding: 1rem; font-weight: 500;">{{ entry.rank }}</td>
+                <td style="padding: 1rem;">
+                    {% if entry.username == username %}
+                    <strong style="color: var(--primary-color);">{{ entry.username }}</strong>
+                    {% else %}
+                    {{ entry.username }}
+                    {% endif %}
+                </td>
+                <td style="padding: 1rem; text-align: center;">{{ entry.time }}</td>
+                <td style="padding: 1rem; text-align: center;">
+                    {% if entry.medal == '🥇' %}
+                    <span style="color: #fbbf24; font-size: 1.5rem;">🏆</span>
+                    {% elif entry.medal == '🥈' %}
+                    <span style="color: #94a3b8; font-size: 1.5rem;">🥈</span>
+                    {% elif entry.medal == '🥉' %}
+                    <span style="color: #b45309; font-size: 1.5rem;">🥉</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div style="text-align: center; margin-top: 2rem;">
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Challenges</a>
+</div>
+{% endblock %} 

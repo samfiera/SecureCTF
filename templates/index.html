@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Challenges - SecureCTF{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+    <h1>Welcome to SecureCTF</h1>
+    <p class="text-secondary">Test your skills in web security with our carefully crafted challenges.</p>
+</div>
+
+<div class="grid">
+    <!-- Level 1 -->
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <h2>Cookie Monster</h2>
+            <span class="badge badge-primary">Level 1</span>
+        </div>
+        <p class="text-secondary mb-4">
+            Can you manipulate browser cookies to find the hidden flag? Perfect for beginners learning about cookie-based authentication.
+        </p>
+        {% if level1_completed %}
+            <div class="alert alert-success mb-4">
+                <strong>Completed!</strong> You've successfully solved this challenge.
+            </div>
+            <a href="{{ url_for('level1') }}" class="btn btn-success" style="width: 100%;">Review Challenge</a>
+        {% else %}
+            <a href="{{ url_for('level1') }}" class="btn btn-primary" style="width: 100%;">Start Challenge</a>
+        {% endif %}
+    </div>
+
+    <!-- Level 2 -->
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <h2>Crypto Master</h2>
+            <span class="badge badge-primary">Level 2</span>
+        </div>
+        <p class="text-secondary mb-4">
+            Decode the encrypted message using your knowledge of base64 and ROT13. A perfect introduction to basic cryptography.
+        </p>
+        {% if level2_completed %}
+            <div class="alert alert-success mb-4">
+                <strong>Completed!</strong> You've successfully solved this challenge.
+            </div>
+            <a href="{{ url_for('level2') }}" class="btn btn-success" style="width: 100%;">Review Challenge</a>
+        {% else %}
+            <a href="{{ url_for('level2') }}" class="btn btn-primary" style="width: 100%;">Start Challenge</a>
+        {% endif %}
+    </div>
+
+    <!-- Level 3 -->
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <h2>SQL Master</h2>
+            <span class="badge badge-primary">Level 3</span>
+        </div>
+        <p class="text-secondary mb-4">
+            Put your SQL injection skills to the test. Can you bypass the login system and find the hidden flag?
+        </p>
+        {% if level3_completed %}
+            <div class="alert alert-success mb-4">
+                <strong>Completed!</strong> You've successfully solved this challenge.
+            </div>
+            <a href="{{ url_for('level3') }}" class="btn btn-success" style="width: 100%;">Review Challenge</a>
+        {% else %}
+            <a href="{{ url_for('level3') }}" class="btn btn-primary" style="width: 100%;">Start Challenge</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %} 

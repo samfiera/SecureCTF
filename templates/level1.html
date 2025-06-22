@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Cookie Monster - SecureCTF{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+    <h1>Level 1: Cookie Monster</h1>
+    <p class="text-secondary">Can you find the hidden flag in the cookies?</p>
+</div>
+
+<div class="grid">
+    <div class="card">
+        <h2>Challenge Description</h2>
+        <p class="text-secondary mb-4">
+            Welcome to the Cookie Monster challenge! In this level, you'll need to:
+        </p>
+        <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.5rem;">
+            <li>Inspect your browser's cookies</li>
+            <li>Look for any suspicious or hidden values</li>
+            <li>Submit the flag you find</li>
+        </ul>
+        <p class="text-secondary mb-4">
+            Hint: The flag format is CTF{...}
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Submit Flag</h2>
+        {% if error %}
+        <div class="alert alert-error mb-4">
+            {{ error }}
+        </div>
+        {% endif %}
+        {% if success %}
+        <div class="alert alert-success mb-4">
+            <strong>Congratulations!</strong> You've completed Level 1!
+        </div>
+        {% endif %}
+        <form method="POST" action="{{ url_for('level1') }}">
+            <div class="mb-4">
+                <input type="text" name="flag" class="input-field" placeholder="Enter the flag" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Flag</button>
+        </form>
+    </div>
+</div>
+
+{% if not success %}
+<div class="card" style="margin-top: 2rem;">
+    <h2>Need Help?</h2>
+    <p class="text-secondary mb-4">
+        Here are some tips to get you started:
+    </p>
+    <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.5rem;">
+        <li>Most modern browsers allow you to view cookies through the Developer Tools (F12)</li>
+        <li>Look for cookies that might be encoded or contain hidden information</li>
+        <li>Remember that cookies are often used to store user data and settings</li>
+    </ul>
+</div>
+{% endif %}
+{% endblock %} 

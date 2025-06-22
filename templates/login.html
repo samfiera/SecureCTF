@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Login - SecureCTF{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 500px; margin: 4rem auto;">
+    <div class="text-center mb-8">
+        <h1>Welcome to SecureCTF</h1>
+        <p class="text-secondary">Enter your username to start the challenge</p>
+    </div>
+
+    {% if error %}
+    <div class="alert alert-error">
+        {{ error }}
+    </div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="mb-4">
+            <input type="text" name="username" class="input-field" placeholder="Enter your username" required>
+            <p class="text-secondary" style="font-size: 0.875rem; margin-top: 0.5rem;">
+                Username must be 3-20 characters long and can only contain letters, numbers, and underscores.
+            </p>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Start Challenge</button>
+    </form>
+</div>
+{% endblock %} 

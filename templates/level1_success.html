@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Level 1 - Success{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-success">Congratulations!</h5>
+        <p class="card-text">
+            You've successfully completed Level 1! You found the flag:
+        </p>
+        <div class="flag-text">
+            {{ flag }}
+        </div>
+        <hr>
+        <p class="card-text">
+            <strong>Explanation:</strong> This challenge demonstrated the importance of validating user input,
+            especially when it comes to cookies. In a real application, you should never trust client-side data
+            and always validate permissions server-side using secure session management.
+        </p>
+        <a href="/level2" class="btn btn-primary mt-3">Proceed to Level 2</a>
+    </div>
+</div>
+{% endblock %} 
