@@ -118,119 +118,155 @@ Solving a Challenge:
     
 ## Development Timeline
 
-### Week 1 (1–7 April)
-**What I did:**
-- Finalized project proposal with clear scope, objectives, and MoSCoW prioritization.
-- Created risk register and mitigation plans.
-- Defined MVP and non-MVP features.
-- Addressed initial legal/ethical concerns.
+### 🧠 Sprint Management Overview
 
-**What went well:**
-- Strong start to planning phase. Tutor feedback on proposal was largely positive, indicating good alignment with module expectations.
+This appendix provides selected extracts from the SecureCTF project log, tracking sprint-based development, testing, and reflective learning over time. Each sprint is approximately two weeks and structured around ScrumBan milestones described in Section 3.4. The full log is maintained in parallel with GitHub issue tracking and includes blockers, features implemented, and key insights. Peer testing and feature-based decision-making were key components of iteration.
 
-**What didn’t go well:**
-- Struggled initially to distinguish between MVP and stretch goals until after reviewing past EMA exemplars.
-
-**What I’ll do next week:**
-- Start coding backend core functionality, focusing on challenge initiation and flag submission.
 ---
-### Week 2 (8–14 April)
-**What I did:**
-- Implemented `/start-challenge`, `/submit-flag`, and `/leaderboard` endpoints.
-- Set up JSON-based storage and basic validation.
 
-**What went well:**
-- Backend work came together quickly, with FastAPI proving very efficient.
+### ✅ Sprint 1: March 20 – April 3
 
-**What didn’t go well:**
-- Faced issues with CORS until I discovered I hadn’t correctly set headers in FastAPI config.
+**Tasks Completed:**
+- Reconfirmed project scope and MoSCoW priorities.
+- Set up GitHub Projects board using ScrumBan with labeled issues.
+- Started conducting a literature search.
 
-**What I’ll do next week:**
-- Begin frontend development to interact with backend APIs.
+**Challenges:**
+- Originally planned React + FastAPI architecture felt too heavy for a solo, short-term project.
+- Started to question value of a complex decoupled frontend.
+
+**Reflection:**
+- Tutor feedback and further research led to the decision to re-evaluate technology stack post-TMA01 and TMA02.
+- Focused on foundational planning deliverables for a strong start.
+
 ---
-### Week 3 (15–21 April)
-**What I did:**
-- Developed core frontend with challenge list, username entry, and leaderboard view.
-- Configured CORS correctly and Dockerized the first challenge.
 
-**What went well:**
-- Successful API integration and functional UI prototype.
+### ✅ Sprint 2: April 4 – April 17
 
-**What didn’t go well:**
-- Docker setup was new territory; required significant debugging.
+**Tasks Completed:**
+- Finalized prioritization and drafted plan.
+- Began prototyping backend using FastAPI.
+- Translated MVP ideas into actual tangible tasks.
 
-**What I’ll do next week:**
-- Add admin endpoint and begin backend security improvements.
+**Challenges:**
+- Encountered frustrating async and CORS errors in FastAPI.
+- Early peer testers found React UI too clunky to install/setup for a small CTF game.
+
+**Reflection:**
+- MVP features implemented but integration felt fragile.
+
 ---
-### Week 4 (22–28 April)
-**What I did:**
-- Added admin reset endpoint.
-- Hardened backend security and used Swagger UI for documentation.
 
-**What went well:**
-- Swagger UI provided a professional touch and made testing easier.
+### ✅ Sprint 3: April 18 – May 1
 
-**What didn’t go well:**
-- Discovered leaderboard was vulnerable to tampering due to missing validation step; fixed it.
+**Tasks Completed:**
+- Implemented all endpoints in FastAPI.
+- Created JSON-based storage for leaderboard and user data.
 
-**What I’ll do next week:**
-- Begin refactoring and review codebase structure.
+**Challenges:**
+- Struggled with Pydantic validation errors in FastAPI.
+- JSON storage lacked flexibility or memory for future features.
+
+**Reflection:**
+- FastAPI was fast to start but then started getting more complicated as I added more needs.
+
 ---
-### Week 5 (29 April–5 May)
-**What I did:**
-- Modularized backend code for maintainability.
-- Reorganized GitHub issues and verified all endpoint functionality.
 
-**What went well:**
-- Code quality and traceability significantly improved.
+### ✅ Sprint 4: May 1 – May 15
 
-**What didn’t go well:**
-- Realized some of my early Git commits lacked descriptive messages, which made tracking harder.
+**Tasks Completed:**
+- Created frontend prototype with Vite.
+- Integrated challenge flow with API.
 
-**What I’ll do next week:**
-- Start frontend enhancements and form-based flag submission.
+**Challenges:**
+- React/Vite setup slowed progress significantly; overengineered for a static app.
+- Peer feedback suggested UI was usable but inconsistent.
+
+**Reflection:**
+- Framework struggles identified early; React probably not ideal for my application.
+
 ---
-### Week 6 (6–12 May)
-**What I did:**
-- Refactored backend validation logic.
-- Started frontend design for improved UX (e.g. navigation, inputs).
 
-**What went well:**
-- Refactored functions now easier to test and reuse.
+### ✅ Sprint 5: May 16 – May 31
 
-**What didn’t go well:**
-- I overcomplicated form handling before simplifying it using controlled components in React.
+**Tasks Completed:**
+- Removed React; tested static HTML + Flask as a prototype.
+- Built challenge 1 logic into Flask using templates and form validation.
 
-**What I’ll do next week:**
-- Finish and test updated frontend workflows.
+**Challenges:**
+- Flask routing simpler but required full app refactors.
+- No more need for Swagger and Docker.
+
+**Reflection:**
+- Flask provided more control with less friction, promising direction for the project.
+
 ---
-### Week 7 (13–19 May)
-**What I did:**
-- Implemented frontend flag submission form and improved challenge navigation.
-- Developed `/challenges/{id}` endpoint for dynamic challenge details.
 
-**What went well:**
-- Seamless integration between frontend and new endpoint.
+### ✅ Sprint 6: June 1 – June 7
 
-**What didn’t go well:**
-- Small bug in challenge ID parsing delayed UI testing.
+**Tasks Completed:**
+- Flask easing into full adoption.
+- Rewrote all templates using Jinja2 (`base.html`, `level1.html`, `level2.html`).
+- Set up flash messages and route-based flow.
 
-**What I’ll do next week:**
-- Final polish of current features and prepare for documentation.
+**Challenges:**
+- Manual rebuild was super time consuming.
+- Needed to rethink state management and navigation.
+
+**Reflection:**
+- Dropping JSON and React removed major headaches.
+- Flask+Jinja made form handling super fluid.
+
 ---
-### Week 8 (20–27 May)
-**What I did:**
-- Conducted final review and updated documentation.
-- Compiled logs, test evidence, and milestone status for TMA02.
 
-**What went well:**
-- Documentation is clean and traceable to GitHub history.
+### ✅ Sprint 7: June 8 – June 14
 
-**What didn’t go well:**
-- Slight time crunch in compiling screenshots and evidence.
+**Tasks Completed:**
+- Prepared screenshots, documentation, and evidence for TMA03.
+- Wrote reflection, updated resource tables, removed obsolete tools (FastAPI, React, Docker).
+- Reviewed project log entries for completeness.
 
-**What I’ll do next:**
-- Submit TMA02 and shift focus to challenge enhancements and user feedback cycle in TMA03.
+**Challenges:**
+- Revisiting older entries revealed gaps in detail. Some had to be rewritten from memory.
+
+**Reflection:**
+- Moving forward, commit to live weekly logs, not retroactive patches.
+- Tutor feedback has reinforced the importance of structured communication and regular updates.
+
+---
+
+### ✅ Sprint 8: June 15 – June 29
+
+**Tasks Completed:**
+- Integrated SQLite for score tracking.
+- Peer testing sent out via Google Forms.
+
+**Challenges:**
+- Feedback revealed some level 2 logic errors that needed to be fixed.
+
+**Reflection:**
+- Major milestones hit: backend, templates, and scoring now fully integrated.
+
+---
+
+### ✅ Sprint 9: June 30 – July 15
+
+**Tasks Completed:**
+- Final peer testing and evidence collection.
+- Updated screenshots, project logs, and risk tables.
+- Revised TM470 report to reflect Flask implementation.
+
+**Challenges:**
+- Tight turnaround for documentation.
+- Small window to learn new frameworks.
+
+**Reflection:**
+- Major turning points this month due to framework switch.
+- The app is now complete and matches scoped deliverables, waiting on more feedback to add extra features.
+
+**Next Focus:**
+- Clean up the app after TMA03 feedback for a perfect EMA!
+
 
 
 ## Security Notice
