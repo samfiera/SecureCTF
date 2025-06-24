@@ -46,7 +46,34 @@ A three-level Capture The Flag (CTF) web application designed to teach fundament
 
 5. Access the application at `http://localhost:(whatever port it says)`
 
-
+## App Structure
+- Framework: Flask (Python web framework)
+- Database: SQLite (a file-based database, ctf.db)
+- Main File: app.py (contains all the logic and routes)
+- Templates: HTML files rendered for each page (login, challenges, leaderboard, etc.)
+## User Flow
+- Login:
+  - User visits the site.
+  - If not logged in, they are redirected to the login page.
+  - User enters a username (no password required for most of the app).
+- Challenge Selection:
+  - After login, user sees the main page with links to Level 1, Level 2, and Level 3.
+Solving a Challenge:
+  - User clicks a level (e.g., Level 1).
+  - The app starts a timer for that level (records the start time in the session).
+  - User solves the challenge and submits the flag via a form.
+- If the flag is correct:
+  - The app calculates how long it took (end time - start time).
+  - The app records the attempt in the database (who, which level, how fast).
+  - User sees a success message and their completion time.
+- If the flag is wrong:
+  - User sees an error message and can try again.
+- Leaderboard:
+  - User can view the leaderboard for each level.
+  - The leaderboard shows the fastest users for each challenge.
+- Logout:
+  - User can log out, which clears their session.
+    
 ## Development Timeline
 
 ### Week 1 (1–7 April)
