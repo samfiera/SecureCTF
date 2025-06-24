@@ -28,10 +28,10 @@ A three-level Capture The Flag (CTF) web application designed to teach fundament
    cd ctf-project
    ```
 
-2. Create a virtual environment (recommended):
+2. Open terminal and create a virtual environment (recommended):
    ```bash
    python -m venv venv
-   # On Windows: venv\Scripts\activate
+   venv\Scripts\activate
    ```
 
 3. Install dependencies:
