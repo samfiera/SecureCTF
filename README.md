@@ -55,7 +55,7 @@ A three-level Capture The Flag (CTF) web application designed to teach fundament
 - Login:
   - User visits the site.
   - If not logged in, they are redirected to the login page.
-  - User enters a username (no password required for most of the app).
+  - User enters a username (no password required for the app).
 - Challenge Selection:
   - After login, user sees the main page with links to Level 1, Level 2, and Level 3.
 Solving a Challenge:
