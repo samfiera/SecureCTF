@@ -36,7 +36,7 @@ A three-level Capture The Flag (CTF) web application designed to teach fundament
 
 3. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install flask flask_sqlalchemy cryptography
    ```
 
 4. Run the application:
@@ -44,7 +44,7 @@ A three-level Capture The Flag (CTF) web application designed to teach fundament
    python app.py
    ```
 
-5. Access the application at `http://localhost:8080`
+5. Access the application at `http://localhost:(whatever port it says)`
 
 
 ## Development Timeline
@@ -176,19 +176,19 @@ A three-level Capture The Flag (CTF) web application designed to teach fundament
 - **Difficulty**: Easy
 - **Topic**: Cookie Manipulation
 - **Skills Learned**: Browser DevTools, Cookie Inspection
-- **Flag Format**: CTF{C00k13_M0nst3r}
+
 
 ### Level 2: Cryptography
 - **Difficulty**: Medium
 - **Topic**: Basic Cryptography
 - **Skills Learned**: Base64 Encoding, Character Shifting
-- **Flag Format**: CTF{R0T_M4st3r_2023}
+
 
 ### Level 3: SQL Injection
 - **Difficulty**: Hard
 - **Topic**: Database Security
 - **Skills Learned**: SQL Injection, UNION Attacks
-- **Flag Format**: CTF{SQL_M4st3r_2023}
+
 
 ## Project Structure
 ```
