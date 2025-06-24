@@ -22,13 +22,13 @@ A three-level Capture The Flag (CTF) web application designed to teach fundament
  
 ## Installation
 
-1. Clone the repository:
+1. Open terminal and clone the repository:
    ```bash
    git clone https://github.com/1samyool/ctf-project.git
    cd ctf-project
    ```
 
-2. Open terminal and create a virtual environment (recommended):
+2. Create a virtual environment (recommended):
    ```bash
    python -m venv venv
    venv\Scripts\activate
