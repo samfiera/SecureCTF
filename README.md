@@ -1,4 +1,4 @@
-# SecureCTF
+# SecureCTF - Created by: Sam Fiera
 *Development Period: March - September 2025
 
 A three-level Capture The Flag (CTF) web application designed to teach fundamental web security concepts through hands-on challenges. This project was developed over several months to create an engaging, educational platform for learning about web security vulnerabilities.
