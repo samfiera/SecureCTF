@@ -46,6 +46,48 @@ A three-level Capture The Flag (CTF) web application designed to teach fundament
 
 5. Access the application at `http://localhost:(whatever port it says)`
 
+## Technical Stack
+
+- **Backend**: Flask 3.0.2
+- **Database**: SQLite3
+- **Frontend**: HTML5, CSS3
+- **Security Features**: Session Management, Cookie Handling, Custom Encryption
+
+## Challenge Details
+
+### Level 1: Cookie Monster
+- **Difficulty**: Easy
+- **Topic**: Cookie Manipulation
+- **Skills Learned**: Browser DevTools, Cookie Inspection
+
+
+### Level 2: Cryptography
+- **Difficulty**: Medium
+- **Topic**: Basic Cryptography
+- **Skills Learned**: Base64 Encoding, Character Shifting
+
+
+### Level 3: SQL Injection
+- **Difficulty**: Hard
+- **Topic**: Database Security
+- **Skills Learned**: SQL Injection, UNION Attacks
+
+
+## Project Structure
+```
+ctf-project/
+├── app.py              # Main application file
+├── requirements.txt    # Python dependencies
+├── ctf.db             # SQLite database
+└── templates/         # HTML templates
+    ├── index.html     # Main page
+    ├── login.html     # User login
+    ├── level1.html    # Cookie challenge
+    ├── level2.html    # Cryptography challenge
+    ├── level3.html    # SQL injection challenge
+    └── leaderboard.html
+```
+
 ## App Structure
 - Framework: Flask (Python web framework)
 - Database: SQLite (a file-based database, ctf.db)
@@ -190,47 +232,6 @@ Solving a Challenge:
 **What I’ll do next:**
 - Submit TMA02 and shift focus to challenge enhancements and user feedback cycle in TMA03.
 
-## Technical Stack
-
-- **Backend**: Flask 3.0.2
-- **Database**: SQLite3
-- **Frontend**: HTML5, CSS3
-- **Security Features**: Session Management, Cookie Handling, Custom Encryption
-
-## Challenge Details
-
-### Level 1: Cookie Monster
-- **Difficulty**: Easy
-- **Topic**: Cookie Manipulation
-- **Skills Learned**: Browser DevTools, Cookie Inspection
-
-
-### Level 2: Cryptography
-- **Difficulty**: Medium
-- **Topic**: Basic Cryptography
-- **Skills Learned**: Base64 Encoding, Character Shifting
-
-
-### Level 3: SQL Injection
-- **Difficulty**: Hard
-- **Topic**: Database Security
-- **Skills Learned**: SQL Injection, UNION Attacks
-
-
-## Project Structure
-```
-ctf-project/
-├── app.py              # Main application file
-├── requirements.txt    # Python dependencies
-├── ctf.db             # SQLite database
-└── templates/         # HTML templates
-    ├── index.html     # Main page
-    ├── login.html     # User login
-    ├── level1.html    # Cookie challenge
-    ├── level2.html    # Cryptography challenge
-    ├── level3.html    # SQL injection challenge
-    └── leaderboard.html
-```
 
 ## Security Notice
 
