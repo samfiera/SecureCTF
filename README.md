@@ -268,7 +268,7 @@ This appendix provides selected extracts from the SecureCTF project log, trackin
 - Clean up the app after TMA03 feedback for a perfect EMA!
 
 
-### Sprint 10: July 16 – August 1
+### ✅ Sprint 10: July 16 – August 1
 
 **Tasks Completed:**
 - Conducted user interface tweaks based on preliminary tutor feedback
@@ -285,7 +285,7 @@ This appendix provides selected extracts from the SecureCTF project log, trackin
 
 ---
 
-### Sprint 11: August 2 – August 30
+### ✅ Sprint 11: August 2 – August 30
 
 **Tasks Completed:**
 - Conducted final round of peer testing with fully functional Flask application
@@ -303,7 +303,7 @@ This appendix provides selected extracts from the SecureCTF project log, trackin
 
 ---
 
-### Sprint 12: September 1 – September 15
+### ✅ Sprint 12: September 1 – September 15
 
 **Tasks Completed:**
 - Polished EMA document: expanded Section 4.3.4 (Testing), cleaned references, scored risks, updated appendices
