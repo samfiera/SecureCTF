@@ -268,6 +268,59 @@ This appendix provides selected extracts from the SecureCTF project log, trackin
 - Clean up the app after TMA03 feedback for a perfect EMA!
 
 
+### Sprint 10: July 16 – August 1
+
+**Tasks Completed:**
+- Conducted user interface tweaks based on preliminary tutor feedback
+- Enhanced form styling and leaderboard readability for accessibility compliance
+- Removed deprecated comments and unused code from Flask templates and routes
+- Verified that all final EMA features were in scope per MoSCoW
+
+**Challenges:**
+- Had limited feedback from peers over the summer period
+
+**Reflection:**
+- Improvements made based on TMA03 strengthened final app quality
+- Final app performance was reliable and clean, requiring no major overhauls
+
+---
+
+### Sprint 11: August 2 – August 30
+
+**Tasks Completed:**
+- Conducted final round of peer testing with fully functional Flask application
+- Reviewed and updated all accessibility elements (color contrast, text size, button labels)
+- Collected and logged final Google Forms feedback (see Appendix X)
+- Archived app version and captured screenshots for additional documentation
+
+**Challenges:**
+- Final testing had to be managed alongside new SOC internship and other commitments
+- Accessibility testing with real users was still limited more than I hoped for
+
+**Reflection:**
+- Peer feedback loop was a highlight: several tweaks (error messaging) directly informed by real users
+- Project now considered complete from a functionality and compliance standpoint
+
+---
+
+### Sprint 12: September 1 – September 15
+
+**Tasks Completed:**
+- Polished EMA document: expanded Section 4.3.4 (Testing), cleaned references, scored risks, updated appendices
+- Final integration of risk register, updated MoSCoW table, and project logs
+- Snipped and formatted all final screenshots, diagrams, and flowcharts
+- Uploaded all required evidence and zipped the final Flask app version
+
+**Challenges:**
+- Tight deadline to submit before travelling on September 16
+- EMA word count and formatting constraints required focused editing and prioritization
+
+**Reflection:**
+- The final sprint felt like a full circle tying together: months of experimentation, pivoting, and iteration finally comes to an end
+- Project confidence at an all-time high due to strong feedback in TMA03, working prototype, and documentation alignment
+
+
+
 
 ## Security Notice
 
