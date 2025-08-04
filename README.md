@@ -267,6 +267,7 @@ This appendix provides selected extracts from the SecureCTF project log, trackin
 **Next Focus:**
 - Clean up the app after TMA03 feedback for a perfect EMA!
 
+---
 
 ### ✅ Sprint 10: July 16 – August 1
 
